@@ -1,0 +1,25 @@
+<shiporder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="shipOrder.xsd" orderid="pedido_123">
+    <orderperson>
+        Marta Perez
+    </orderperson>
+    <shipto>
+        <name>Filomena García</name>
+        <address>Rúa falsa, 123</address>
+        <city>Santiago</city>
+        <country>Galiza</country>
+    </shipto>
+    <item>
+        <title>La Conjura de los Necios</title>
+        <note>premio Pulitzer postmorten</note>
+        <quantity>10</quantity>
+        <price>20.50</price>
+    </item>
+    <item>
+        <title>Un cuarto Propio</title>
+        <quantity>15</quantity>
+        <price>19.50</price>
+    </item>
+</shiporder>
+
+<!--Pode non aparecer "note"  en item porque a ocurrencia mínima é 0-->

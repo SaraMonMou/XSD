@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="records">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="record" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="name" type="xs:string" />
+                            <xs:element name="password" type="passwordType" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="passwordType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="4"></xs:minLength>
+            <xs:maxLength value="10"></xs:maxLength>
+            <xs:pattern value="[a-zA-Z0-9]{4,10}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+
+
+<!--Given the document records.xml write the content of the file records.xsd 
+    that allows to validate it, taking into account that the password element must be able
+    to take a minimum of four characters and a maximum of ten characters. 
+    These characters can be either upper or lower case letters from "a" to "z", or digits from "0" to "9".
+    Create a named type for these restictions.
+
+To do so, use pattern, minLength and maxLength-->

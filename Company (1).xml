@@ -1,0 +1,98 @@
+<Company xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="Company%20%281%29.xsd" >
+
+    <General_information multinational="NO" currency="Euro">
+        <name>
+            XML Technologies
+        </name>
+        <number_employees>
+            6
+        </number_employees>
+        <sector>
+            Tecnology
+        </sector>
+    </General_information>
+
+    <Departments>
+        <Department code="ADMIN" name="Administration"/>
+        <Department code="COMPU" name="Computer"/>
+        <Department code="MARKE" name="Marketing"/>
+    </Departments>
+
+    <Employees staffing_information="2/03/2023">
+        <employee user="atorres" department_code="ADMIN">
+            <name> Alicia Torres Pan </name>
+            <role> Head of department</role>
+            <sick_leave> NO</sick_leave>
+            <salary>2250.00</salary>
+            <key>3%abYki6</key>
+        </employee>
+        <employee user="xaldrei" department_code="ADMIN">
+            <name> Xoán Aldrei Soto </name>
+            <role> Employee</role>
+            <sick_leave> YES</sick_leave>
+            <salary>1200.00</salary>
+            <key>6@hjKm87</key>
+        </employee>
+        <employee user="amotar" department_code="ADMIN">
+            <name>Ana Mota Rei</name>
+            <role> Employee</role>
+            <sick_leave> NO</sick_leave>
+            <salary>1250.50</salary>
+            <key>4%wtrtHQ</key>
+        </employee>
+        <employee user="obaltar" department_code="COMPU">
+            <name> Óscar Baltar Dacosta</name>
+            <role> Head of department</role>
+            <sick_leave>YES </sick_leave>
+            <salary>2300.75</salary>
+            <key> 8$abcdHj</key>
+        </employee>
+        <employee user="hvilar" department_code="COMPU">
+            <name>Helena Vilar Moure</name>
+            <role> Employee</role>
+            <sick_leave> NO</sick_leave>
+            <salary> 1500.35</salary>
+            <key> 9?sdKp:s</key>
+        </employee>
+        <employee user="guest " departmet_code="MARKE">
+            <name>Andrea Serodio Paz</name>
+            <role> Head of department</role>
+            <sick_leave> NO</sick_leave>
+            <salary> 2500.85</salary>
+            <key>2$xlzhYH</key>
+        </employee>
+    </Employees>
+</Company>
+
+<!--
+
+• Todos os elementos e atributos son obrigatorios a non ser que se especifique o contrario.
+
+
+    • Agás fillos directos dos elementos de información do persoal departamental e xeral da empresa
+    información, sempre que sexa posible agrupar polo menos dous elementos ou dous atributos, grupo ou
+    debe utilizarse attributeGroup.¿?
+
+    • A información xeral da empresa debe ser dun tipo definido por nós chamado GeneralInfoType,
+    onde os elementos para o nome da empresa, o número de empregados (que debe ser un número enteiro
+    valor superior a 0) e debe definirse o sector.¿?
+
+    • O código de cada departamento debe ser único.¿?
+
+    • Cada departamento pode ter de 0 a tres empregados. Debe haber un tipo definido por nós denominado
+    employeeType, onde debemos definir os posibles valores que os elementos nome e apelido,
+    papel, baixa por enfermidade e soldo pode ter. ¿?
+
+
+
+
+• A chave debe ser dun tipo definido por nós chamado keyType, e os valores admitidos por este tipo poden
+ser cadeas de oito caracteres onde o primeiro carácter debe ser un díxito de 0 a 9, o segundo debe ser
+ser un carácter que non sexa un díxito, despois de que aparezan de 2 a 4 letras da a á z, despois unha letra da A á
+Z pode aparecer ou non, entón debe aparecer unha destas tres letras maiúsculas (K, Y, H) e, finalmente
+poden aparecer de 0 a 3 caracteres.
+
+
+• Non definas no esquema máis tipos de datos que os indicados: xeneralInfoType,
+DepartmentType, employeeType, textType e keyType-->

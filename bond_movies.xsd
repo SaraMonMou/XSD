@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="bond_movies">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="movie" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title" type="xs:string" />
+                            <xs:element name="bond" type="xs:string" />
+                            <xs:element name="bond_girl" type="xs:string" />
+                            <xs:element name="regie" type="xs:string" />
+                            <xs:element name="year" type="xs:gYear" />
+                            <xs:element name="duration">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="0"></xs:minInclusive>
+                                        <xs:maxInclusive value="300"></xs:maxInclusive>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="number" type="numerType" use="required">
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="month" type="monthType"  use="required" />
+            <xs:attribute name="year" type="xs:integer" use="required" />
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="numerType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="_\d{2}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="monthType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="January"></xs:enumeration>
+            <xs:enumeration value="February"></xs:enumeration>
+            <xs:enumeration value="March"></xs:enumeration>
+            <xs:enumeration value="April"></xs:enumeration>
+            <xs:enumeration value="may"></xs:enumeration>
+            <xs:enumeration value="June"></xs:enumeration>
+            <xs:enumeration value="July"></xs:enumeration>
+            <xs:enumeration value="August"></xs:enumeration>
+            <xs:enumeration value="September"></xs:enumeration>
+            <xs:enumeration value="October"></xs:enumeration>
+            <xs:enumeration value="November"></xs:enumeration>
+            <xs:enumeration value="December"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+
+<!-- Use the precise data types for each element and attribute of the document.
+Restrict the duration element to values between 0 and 300 (inclusive) using a type called
+durationType.
+Restrict the number attribute to a string of length 3 with a pattern that indicates that the string
+should start with an underscore followed by exactly two digits. Use a type called numberType.
+Restrict the month attribute to specific enumerated values representing the months of the year
+using a type called monthType.-->

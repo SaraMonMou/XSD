@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="prices">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="price" maxOccurs="unbounded" type="priceType" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="priceType">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="3"></xs:totalDigits>
+            <xs:fractionDigits value="2"></xs:fractionDigits>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
+
+<!--Write the content of the prices.xsd file that allows to validate prices.xml. 
+    Take into account that the price element can be a number that contains three digits maximum and,
+    of them, only two can be decimal. 
+    To do this, write a restriction that cannot be used by other elements.-->
